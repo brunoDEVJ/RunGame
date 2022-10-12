@@ -1,0 +1,15 @@
+{
+  "name": "rungame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "https-server -p 8082"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "https-server": "^0.1.2"
+  }
+}
