@@ -42,7 +42,13 @@ const loop = setInterval(() => {
         mario.style.marginLeft = "50px"
 
         perdeu = 'S'
+
         clearInterval(loop)
+        setTimeout(() => {
+            alert(`Seus pontos são: ${pontos.innerHTML}`)            
+        }, 400);
+        
+
     }
 
         const currentPontos = Number(pontos.innerHTML)
