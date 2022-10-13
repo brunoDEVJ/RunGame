@@ -55,12 +55,11 @@ const loop = setInterval(() => {
     const currentPontos = Number(pontos.innerHTML)
     pontos.innerHTML = (currentPontos + 0.01).toFixed(2)
 
-    if (currentPontos >= 0 && currentPontos < 5){
-        console.log('a')
+    if (currentPontos >= 0 && currentPontos < 5 && pipePosition > 380){
         pipe.style.animation = `pipe-animation 3s infinite linear`
-    }else if (currentPontos >= 5 && currentPontos <10){
+    }else if (currentPontos >= 5 && currentPontos <10 && pipePosition < 0){
         pipe.style.animation = `pipe-animation 2s infinite linear`
-    }else {
+    }else if (currentPontos > 10 && pipePosition < 0){
         pipe.style.animation = `pipe-animation 1s infinite linear`
 
     }
