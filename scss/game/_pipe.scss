@@ -2,13 +2,19 @@
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 2s infinite linear;
+    animation: pipe-animation 3s infinite linear;
+    
     @keyframes pipe-animation {
+        
         from {
-            right: -80px;
+            right: -100px;
         } 
         to {
             right: 100%;
         }
     }
+
+    
 }
+
+
