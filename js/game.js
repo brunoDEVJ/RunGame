@@ -26,7 +26,7 @@ const loop = setInterval(() => {
     const cloudsPosition = clouds.offsetLeft;
     const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
 
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition <= 79) {
+    if (pipePosition <= 25  && pipePosition > 0 && marioPosition <= 34) {
 
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`
@@ -39,8 +39,8 @@ const loop = setInterval(() => {
         clouds.style.animation = 'none';
 
         mario.src = '../imgs/game-over.png'
-        mario.style.width = "75px"
-        mario.style.marginLeft = "50px"
+        mario.style.width = "30px"
+        mario.style.marginLeft = "25px"
 
         button.style.left = "50%"
 
@@ -50,7 +50,7 @@ const loop = setInterval(() => {
         clearInterval(loop)
         setTimeout(() => {
             alert(`Seus pontos são: ${pontos.innerHTML}`)  
-        }, 400);
+        }, 10);
         
 
     }
@@ -58,7 +58,7 @@ const loop = setInterval(() => {
         const currentPontos = Number(pontos.innerHTML)
         pontos.innerHTML = (currentPontos + 0.01).toFixed(2)
         console.log(pontos.innerHTML)
-    if (pontos.innerHTML >= 3 && pipePosition < 0){
+    if (pontos.innerHTML >= 3.3 && pipePosition < 0){
          pipe.style.animation = `pipe-animation 2s infinite linear`
     }
 
