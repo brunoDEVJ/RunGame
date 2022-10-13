@@ -2,6 +2,7 @@ const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
 const pontos = document.querySelector('.pontos');
+const button = document.querySelector('.button');
 let perdeu = ''
 
 const jumper = (event) => {
@@ -41,11 +42,14 @@ const loop = setInterval(() => {
         mario.style.width = "75px"
         mario.style.marginLeft = "50px"
 
+        button.style.left = "50%"
+
         perdeu = 'S'
+        button.style.left = "50%"          
 
         clearInterval(loop)
         setTimeout(() => {
-            alert(`Seus pontos são: ${pontos.innerHTML}`)            
+            alert(`Seus pontos são: ${pontos.innerHTML}`)  
         }, 400);
         
 
@@ -61,9 +65,9 @@ const loop = setInterval(() => {
 }, 10);
 
 
-const reload = (event) => {
-    if (event.keyCode == 27)
+const reload = () => {
         window.location.reload(true)
 }
-document.addEventListener("keyup", reload)
+button.addEventListener("click", reload);
 document.addEventListener("keydown", jumper);
+document.addEventListener("click", jumper);

@@ -120,4 +120,13 @@
 
 .pontuacao {
   position: absolute;
+}
+
+.button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  border-radius: 50%;
+  font-size: 40px;
 }/*# sourceMappingURL=main.css.map */
