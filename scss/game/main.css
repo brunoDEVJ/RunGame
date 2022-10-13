@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("../../imgs/wp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+}
+
 .game_board {
-  width: 630px;
-  height: 430px;
+  width: 390px;
+  height: 390px;
   border-bottom: 25px solid rgb(32, 173, 55);
   margin: 0 auto;
   position: relative;
@@ -17,9 +24,9 @@
 .pipe {
   position: absolute;
   bottom: 0;
-  width: 4%;
-  -webkit-animation: pipe-animation 3s infinite linear;
-          animation: pipe-animation 3s infinite linear;
+  width: 30px;
+  -webkit-animation: pipe-animation 5s infinite linear;
+          animation: pipe-animation 5s infinite linear;
 }
 @-webkit-keyframes pipe-animation {
   from {
@@ -39,7 +46,7 @@
 }
 
 .mario {
-  width: 4%;
+  width: 30px;
   position: absolute;
   bottom: 0;
 }

@@ -3,7 +3,7 @@ const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
 const pontos = document.querySelector('.pontos');
 const button = document.querySelector('.button');
-let perdeu = ''
+
 
 const jumper = (event) => {
     if (event.keyCode != 27) {
@@ -22,18 +22,17 @@ const loop = setInterval(() => {
 
 
 
-    const pipePosition = pipe.offsetLeft;
+    const pipePosition = Number(window.getComputedStyle(pipe).left.replace('px', ''));
     const cloudsPosition = clouds.offsetLeft;
-    const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
+    const marioPositionY = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
 
-    if (pipePosition <= 25  && pipePosition > 0 && marioPosition <= 34) {
-
+    if (pipePosition <= 25  && pipePosition > 0 && marioPositionY <= 37) {
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`
 
 
         mario.style.animation = 'none';
-        mario.style.bottom = `${marioPosition}px`
+        mario.style.bottom = `${marioPositionY}px`
 
         clouds.style.left = `${cloudsPosition}px`
         clouds.style.animation = 'none';
@@ -42,27 +41,35 @@ const loop = setInterval(() => {
         mario.style.width = "30px"
         mario.style.marginLeft = "25px"
 
-        button.style.left = "50%"
 
-        perdeu = 'S'
-        button.style.left = "50%"          
-
+        button.style.left = "30%"          
+        
         clearInterval(loop)
         setTimeout(() => {
             alert(`Seus pontos são: ${pontos.innerHTML}`)  
         }, 10);
         
+        
+    }
+    
+    const currentPontos = Number(pontos.innerHTML)
+    pontos.innerHTML = (currentPontos + 0.01).toFixed(2)
+
+    if (currentPontos >= 0 && currentPontos < 5){
+        console.log('a')
+        pipe.style.animation = `pipe-animation 3s infinite linear`
+    }else if (currentPontos >= 5 && currentPontos <10){
+        pipe.style.animation = `pipe-animation 2s infinite linear`
+    }else {
+        pipe.style.animation = `pipe-animation 1s infinite linear`
 
     }
-
-        const currentPontos = Number(pontos.innerHTML)
-        pontos.innerHTML = (currentPontos + 0.01).toFixed(2)
-        console.log(pontos.innerHTML)
-    if (pontos.innerHTML >= 3.3 && pipePosition < 0){
-         pipe.style.animation = `pipe-animation 2s infinite linear`
-    }
-
 }, 10);
+
+
+
+
+
 
 
 const reloadESC = (event) => {

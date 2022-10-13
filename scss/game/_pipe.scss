@@ -1,8 +1,9 @@
 .pipe {
     position: absolute;
     bottom: 0;
-    width: 4%;
-    animation: pipe-animation 3s infinite linear;
+    width: 30px;
+    animation: pipe-animation 5s infinite linear;
+    
     
     @keyframes pipe-animation {
         
