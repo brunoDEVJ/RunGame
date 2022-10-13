@@ -9,7 +9,7 @@
 }
 
 .jump {
-    animation: jump 500ms ease-out;
+    animation: jump 780ms linear;
 
     @keyframes jump {
         0% {
@@ -17,21 +17,21 @@
         }
 
         20% {
-            bottom: 180px;
+            bottom: 100px;
         }
 
         40% {
-            bottom: 210px;
+            bottom: 150px;
         }
         50% {
-            bottom: 210px;
+            bottom: 150px;
         }
         60% {
-            bottom: 210px;
+            bottom: 150px;
         }
 
         80% {
-            bottom: 180px;
+            bottom: 100px;
         }
 
         100% {
