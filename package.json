@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "https-server -p 8082"
+    "start": "https-server -p 8082"
   },
   "keywords": [],
   "author": "",
