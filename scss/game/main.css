@@ -5,8 +5,8 @@
 }
 
 .game_board {
-  width: 100%;
-  height: 500px;
+  width: 100vw;
+  height: 100vh;
   border-bottom: 25px solid rgb(32, 173, 55);
   margin: 0 auto;
   position: relative;

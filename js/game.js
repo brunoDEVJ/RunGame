@@ -65,9 +65,14 @@ const loop = setInterval(() => {
 }, 10);
 
 
+const reloadESC = (event) => {
+    if(event.keyCode === 27)
+        window.location.reload(true)
+}
 const reload = () => {
         window.location.reload(true)
 }
 button.addEventListener("click", reload);
+document.addEventListener("keyup", reloadESC);
 document.addEventListener("keydown", jumper);
 document.addEventListener("click", jumper);
